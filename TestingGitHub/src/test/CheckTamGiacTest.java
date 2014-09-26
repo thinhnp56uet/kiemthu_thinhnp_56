@@ -16,7 +16,7 @@ public class CheckTamGiacTest {
 	public void testCheckTamGiacCan() {
 		CheckTamGiac test=new CheckTamGiac();
 		String result = test.checkTamGiac(4, 4, 6);
-		
+		assertEquals(result,"Isosceles");
 	}
 
 }
