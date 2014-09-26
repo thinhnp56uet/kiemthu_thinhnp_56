@@ -11,8 +11,7 @@ public class SimpleNextDay {
 			return result;
 		}
 		boolean namNhuan;
-		if ((year % 100 != 0 && year % 4 == 0)
-				|| (year % 100 == 0 && year % 400 == 0)) {
+		if ((year % 100 != 0 && year % 4 == 0) || year % 400 == 0) {
 			namNhuan = true;
 		} else {
 			namNhuan = false;
@@ -64,13 +63,13 @@ public class SimpleNextDay {
 			}
 		}
 		if (month == 2 && namNhuan) {
-			if (day == 29) {
+			if (day == 30) {
 				day = 1;
 				month = month + 1;
 			}
 		}
 		if (month == 2 && !namNhuan) {
-			if (day == 28) {
+			if (day == 29) {
 				day = 1;
 				month = month + 1;
 			}
