@@ -2,12 +2,11 @@ package code;
 
 public class SimpleNextDay {
 	public String nextDate(int day, int month, int year) {
-		String result = "";
+		String result = "Not A Valid Date";
 		// ////////////////////////////
 		// ///////Kiem Tra Hop Le//////
 		// ////////////////////////////
 		if (year > 2012 || year < 1812) {
-			result = "Not A Valid Date";
 			return result;
 		}
 		boolean namNhuan;
@@ -17,31 +16,26 @@ public class SimpleNextDay {
 			namNhuan = false;
 		}
 		if (month < 1 || month > 12) {
-			result = "Not A Valid Date";
 			return result;
 		}
 		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8
 				|| month == 10 || month == 12) {
 			if (day < 1 || day > 31) {
-				result = "Not A Valid Date";
 				return result;
 			}
 		}
 		if (month == 4 || month == 6 || month == 5 || month == 9 || month == 11) {
 			if (day < 1 || day > 30) {
-				result = "Not A Valid Date";
 				return result;
 			}
 		}
 		if (month == 2 && namNhuan) {
 			if (day < 1 || day > 29) {
-				result = "Not A Valid Date";
 				return result;
 			}
 		}
 		if (month == 2 && !namNhuan) {
 			if (day < 1 || day > 28) {
-				result = "Not A Valid Date";
 				return result;
 			}
 		}
